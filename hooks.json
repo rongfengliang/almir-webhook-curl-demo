@@ -23,6 +23,12 @@
     "include-command-output-in-response": true,
     "include-command-output-in-response-on-error": true,
     "command-working-directory": "/app",
+    "pass-arguments-to-command":[
+        {
+              "source": "url",
+              "name": "token"
+        }
+    ],
     "response-headers":
     [
       {
@@ -32,8 +38,8 @@
     ],
     "trigger-rule": {
         "match": {
-            "type": "value",
-            "value": "42",
+            "type": "regex",
+            "regex": ".*",
             "parameter": {
                 "source": "url",
                 "name": "token"
