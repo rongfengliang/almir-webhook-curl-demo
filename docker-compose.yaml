@@ -2,6 +2,7 @@ version: "3"
 services:
   webhook:
     build: ./
+    image: dalongrong/almir-webhook-curl
     command: ["-verbose", "-hooks=/etc/webhook/hooks.json","-hotreload"]
     volumes:
     - "./hooks.json:/etc/webhook/hooks.json"
