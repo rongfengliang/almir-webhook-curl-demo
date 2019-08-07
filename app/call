@@ -1,2 +1,2 @@
 #!/bin/sh
-curl -i http://github.com
+curl  https://www.cnblogs.com/rongfengliang
