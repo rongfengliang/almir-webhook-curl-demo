@@ -2,15 +2,40 @@
     "id": "simple-one",
     "execute-command": "/app/call",
     "response-message": "Executing simple webhook...",
-    "include-command-output-in-response":true,
-    "include-command-output-in-response-on-error":true,
-    "command-working-directory":"/app",
+    "include-command-output-in-response": true,
+    "include-command-output-in-response-on-error": true,
+    "command-working-directory": "/app",
     "trigger-rule": {
         "match": {
             "type": "value",
             "value": "42",
             "parameter": {
                 "source": "header",
+                "name": "token"
+            }
+        }
+    }
+},
+{
+    "id": "demo",
+    "execute-command": "/app/call",
+    "response-message": "Executing simple webhook...",
+    "include-command-output-in-response": true,
+    "include-command-output-in-response-on-error": true,
+    "command-working-directory": "/app",
+    "response-headers":
+    [
+      {
+        "name": "content-type",
+        "value": "text/html"
+      }
+    ],
+    "trigger-rule": {
+        "match": {
+            "type": "value",
+            "value": "42",
+            "parameter": {
+                "source": "url",
                 "name": "token"
             }
         }

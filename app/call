@@ -1,2 +1,2 @@
 #!/bin/sh
-curl  https://www.cnblogs.com/rongfengliang
+curl -s  https://www.cnblogs.com/rongfengliang
